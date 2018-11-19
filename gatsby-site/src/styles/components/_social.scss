@@ -1,0 +1,30 @@
+#social{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#connect{
+    text-decoration: bold;
+    font-size: 24px;   
+}
+
+/* social icons, base64 */
+#social .icon-linkedin img {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 2px;
+}
+
+#social .icon-email img {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 2px;
+}
+
+#social .icon-github img {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 2px;
+}
