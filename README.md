@@ -1,17 +1,26 @@
 Start
-NPM install in gatsby-site and app
+    1. update node to latest version using nvm or 7.6+: `nvm install 10.13.0` or `nvm install node --reinstall-packages-from=node`
+    2. install global: `npm install --global gatsby-cli nodemon`
+    3. install gatsby-site: `npm run gatsby-install`
+    - recursively install all node modules subdependencies (recursive-install???)
+    4. install: `npm install`
+
+
+Global:
 install gatsby-cli globally: npm install --global gatsby-cli
-update node to latest version using nvm or 7.6+: `nvm install node` or `nvm install node --reinstall-packages-from=node`
 install mongodb globally?
 npm install -g nodemon (or dev dependency?): npm install --global nodemon
-    "install-global": "npm install --global gatsby-cli nodemon",
+
+- npm install --save dns fs module net tls
 - install gatsby dependencies and app dependencies separate commands
-- 
+- NPM install in gatsby-site and app
 GatsbyJS - install globally (gatsby-cli)
 NoSQL database: MongoDB (or Couchbase?) - install globally
 NodeJS + Express
 Typescript
 - upgrade node version to 7.6+
+- 
+Full size of app? Disk space?
 
 ------ Part 1: 
 Create a Todo List API in Node JS 
@@ -58,6 +67,7 @@ GRAPHQL-TO-MONGODB, OR HOW I LEARNED TO STOP WORRYING AND LOVE GENERATED QUERY A
 A CRUD app with Apollo, GraphQL, NodeJs, Express, MongoDB, Angular (v5): https://blog.cloudboost.io/a-crud-app-with-apollo-graphql-nodejs-express-mongodb-angular5-2874111cd6a5
 Setting up a simple GraphQL Server with Node, Express and Mongoose: https://medium.com/@gethylgeorge/setting-up-a-simple-graphql-server-with-node-express-and-mongoose-ff8a1071af53
 * Using GraphQL with MongoDB: https://www.compose.com/articles/using-graphql-with-mongodb/
+<Location> with CodeSandbox: https://github.com/gatsbyjs/gatsby/issues/1875
 
 ------- mlab.com
 To connect using the mongo shell:

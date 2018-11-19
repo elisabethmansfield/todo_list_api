@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Location } from '@reach/router';
 import SubHeader from '../components/SubHeader';
 import AddTask from '../components/AddTask';
 import Tasks from '../components/Tasks';
@@ -54,12 +55,12 @@ export default class ToDoList extends React.Component {
         }
       `
     })
-    .then(response => {
-      console.log(response); 
-      this.setState( (prevState) => {
-        {tasks: response.data.todos}
-      });
-    });
+    // .then(response => {
+    //   console.log(response); 
+    //   this.setState( (prevState) => {
+    //     {tasks: response.data.todos}
+    //   });
+    // });
   }
   // componentDidMount() {
   //   try {
@@ -73,11 +74,26 @@ export default class ToDoList extends React.Component {
   //     // Do nothing at all
   //   }
   // }
+  componentDidMount() {
+    const url = window.location.origin.toString() + "/api";
+    console.log(
+    'my url: ',url,
+  //   '\nhash: ',location.hash,
+  //   '\nhost: ',location.host,	
+  //   '\nhostname: ',location.hostname,	
+  //   '\nhref: ',location.href,	
+  //   '\norigin: ',location.origin,	
+  //   '\npathname: ',location.pathname,	
+  //   '\nport: ',location.port,	
+  //   '\nprotocol: ',location.protocol,	
+  //   '\nsearch: ',location.search,	
+  )
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.tasks.length !== this.state.tasks.length) {
       const json = JSON.stringify(this.state.tasks);
-      localStorage.setItem('tasks', json);
+      // localStorage.setItem('tasks', json);
     }
   }
   render() {
@@ -87,6 +103,12 @@ export default class ToDoList extends React.Component {
           <SubHeader subtitle={subtitle} />
           <div className="container">
             <div className="widget">
+              {/* <Location>
+                {({ location }) => {
+                  console.log(location)
+                  return <p>The location is {location.pathname}</p>
+                }}
+              </Location> */}
               <Tasks
                 tasks={this.state.tasks}
                 handleDeleteTasks={this.handleDeleteTasks}

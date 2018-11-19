@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "gatsby-build": "cd gatsby-site && gatsby build && cd ..",
+    "gatsby-develop": "echo $HOSTNAME && cd gatsby-site && gatsby develop -H $HOSTNAME -p 8000",
     "gatsby-install": "cd gatsby-site && npm install && cd ..",
     "install-all": "npm install && npm run gatsby-install",
     "start": "cross-env NODE_ENV=production && npm run gatsby-build && node server/app.js",
