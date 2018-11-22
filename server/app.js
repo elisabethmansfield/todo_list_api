@@ -3,7 +3,6 @@
 /* Server Dependencies */
 const express = require("express");
 const app = express();
-// const request = require('request');
 const UUID = require("uuid");
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
@@ -48,7 +47,7 @@ const startServer = (async () => {
       }
     `;
 
-    // define resolvers for GraphQL schema
+    // Define resolvers for GraphQL schema
     const resolvers = {
       Query: {
         todo: async (root,{_id}) => {
@@ -92,24 +91,6 @@ const startServer = (async () => {
         schema,
         context: {}
       })
-      // , 
-    //   function(req,res){
-    //     graphqlHTTP.parseBody(req, function (err, data) {
-    //       if(err) throw err;
-    //       request({
-    //         url: 'http://' + host + ":" + port, 
-    //         method: 'POST',
-    //         headers: {
-    //           'Content-Type': 'application/graphql'
-    //         },
-    //         body: data.query 
-    //       }, 
-    //       function(err, resp, body){
-    //         if(err) throw err;
-    //         res.send(JSON.parse(body));
-    //       });
-    //     });
-    // }
     );
     
     // Root route
