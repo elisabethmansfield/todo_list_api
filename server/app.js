@@ -24,7 +24,7 @@ const startServer = (async () => {
     const database = db.db('todo_list_api_db');
     const ToDos = database.collection('todos');
 
-    // define typeDefs for GraphQL schema
+    // Define typeDefs for GraphQL schema
     const typeDefs = `
       type ToDo {
         _id: ID!
@@ -79,7 +79,7 @@ const startServer = (async () => {
       },      
     };
 
-    // define GraphQL schema
+    // Define GraphQL schema
     const schema = graphql_tools.makeExecutableSchema({
       typeDefs,
       resolvers
