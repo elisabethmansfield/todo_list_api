@@ -1,9 +1,13 @@
 import React from 'react';
 
 export default class AddTask extends React.Component {
-  state = {
-    error: undefined
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: undefined
+    };
+    this.handleAddTask = this.handleAddTask.bind(this);
+  }
   handleAddTask = (e) => {
     e.preventDefault();
     const task = e.target.elements.task.value.trim();

@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToDoList renders correctly 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="header__title"
+      >
+        To Do List
+      </h1>
+      <h2
+        className="header__subtitle"
+      >
+        Add and remove tasks
+      </h2>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="widget"
+    >
+      <div>
+        <div
+          className="widget-header"
+        >
+          <h3
+            className="widget-header__title"
+          >
+            Task List
+          </h3>
+        </div>
+        <div
+          className="task"
+          id="5bf4e5e4232d4b185e963d4d"
+        >
+          <div
+            class="custom-control custom-checkbox"
+          >
+            <input
+              checked={false}
+              class="custom-control-input"
+              id={1}
+              name={1}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              class="task__text"
+              for={1}
+            >
+              Hello World
+            </label>
+          </div>
+          <button
+            className="button button--link"
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </div>
+        <div
+          className="task"
+          id="6bf4e554e3dd4b385e9e3a4c"
+        >
+          <div
+            class="custom-control custom-checkbox"
+          >
+            <input
+              checked={true}
+              class="custom-control-input"
+              id={2}
+              name={2}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              class="task__text"
+              for={2}
+            >
+              Go to Store
+            </label>
+          </div>
+          <button
+            className="button button--link"
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </div>
+        <div
+          className="task"
+          id="8af4e5e5432e3b181e9e3d3b"
+        >
+          <div
+            class="custom-control custom-checkbox"
+          >
+            <input
+              checked={false}
+              class="custom-control-input"
+              id={3}
+              name={3}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              class="task__text"
+              for={3}
+            >
+              Buy Milk
+            </label>
+          </div>
+          <button
+            className="button button--link"
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <div>
+        <form
+          className="add-task"
+          onSubmit={[Function]}
+        >
+          <input
+            className="add-task__input"
+            name="task"
+            type="text"
+          />
+          <button
+            className="button"
+          >
+            Add Task
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

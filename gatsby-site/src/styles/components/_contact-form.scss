@@ -1,0 +1,27 @@
+.contact-form__confirm{
+  color: $off-white;
+  font-style: italic;
+  margin: $m-size 0 0 0;
+  padding: 0 $s-size $m-size $s-size;    
+}
+
+.contact-form__input{
+  background: $light-grey;
+  border: none;
+  color: $off-white;
+  border-bottom: .3rem solid darken($light-grey, 10%);
+  flex-grow: 1;
+  margin: 0 0 $s-size 0;
+  padding: $s-size;    
+}
+
+@media (min-width: $desktop-breakpoint-long) {
+  .contact-form {
+    flex-direction: row;
+  }
+  .contact-form__input {
+    margin: $s-size 0 $s-size $s-size;
+    width: $desktop-breakpoint-long;
+  }
+}
+

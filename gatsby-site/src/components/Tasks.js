@@ -5,12 +5,6 @@ const Tasks = (props) => (
     <div>
       <div className="widget-header">
         <h3 className="widget-header__title">Task List</h3>
-        <button
-          className="button button--link"
-          onClick={props.handleDeleteTasks}
-        >
-          Remove All
-        </button>
       </div>
   
       {props.tasks.length === 0 && <p className="widget__message">Please add a task to get started.</p>}
@@ -18,11 +12,12 @@ const Tasks = (props) => (
       {
         props.tasks.map((task, index) => (
           <Task
-            key={task}
-            taskText={task}
+            key={task._id}
+            id={task._id}
+            taskText={task.name}
             count={index + 1}
-            checked={props.checked}
-            onChange={props.handleCheckbox}
+            checked={task.checked}
+            handleCheckbox={props.handleCheckbox}
             handleDeleteTask={props.handleDeleteTask}
           />
         ))
@@ -31,3 +26,10 @@ const Tasks = (props) => (
 );
 
 export default Tasks;
+
+        // <button
+        //   className="button button--link"
+        //   onClick={props.handleDeleteTasks}
+        // >
+        //   Remove All
+        // </button>

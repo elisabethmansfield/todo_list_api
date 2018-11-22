@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm renders correctly 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="header__title"
+      >
+        Contact Form
+      </h1>
+      <h2
+        className="header__subtitle"
+      >
+        Submit your information
+      </h2>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="widget"
+    >
+      <form
+        action=""
+        className="contact-form"
+        onSubmit={[Function]}
+        type="POST"
+      >
+        <div
+          className="widget-header"
+        >
+          <h3
+            className="widget-header__title"
+          >
+            Name
+          </h3>
+        </div>
+        <input
+          className="contact-form__input"
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+        <br />
+        <div
+          className="widget-header"
+        >
+          <h3
+            className="widget-header__title"
+          >
+            Message
+          </h3>
+        </div>
+        <textarea
+          className="contact-form__input"
+          name="message"
+          onChange={[Function]}
+        />
+        <br />
+        <input
+          className="contact-button"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;

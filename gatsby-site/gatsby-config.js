@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'To Do List Application',
+    title: 'To Do List Application'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

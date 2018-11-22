@@ -45,13 +45,14 @@ const startServer = async () => {
         addToDo(name: String!, checked: Boolean): ToDo
         deleteToDo(_id: ID!): ToDo
         checkToDo(_id: ID!): ToDo
+        uncheckToDo(_id: ID!): ToDo
       }
       schema {
         query: Query
         mutation: Mutation
       }
     `;
-    
+
     // define resolvers for GraphQL schema
     const resolvers = {
       Query: {
@@ -67,18 +68,21 @@ const startServer = async () => {
           const res = await ToDos.insertOne(args);
           return convertString(res.ops[0]);
         },
-        deleteToDo: async (root, args, context, info) => {
-          const res = await ToDos.deleteOne(args);
-          return convertString(res.ops[0]);
+        deleteToDo: async (root, {_id}, context, info) => {
+          const todo = await ToDos.findOne(ObjectId(_id));
+          await ToDos.deleteOne(todo);
         },
-        checkToDo: async (root, args, context, info) => {
-          const status = await ToDos.findOne(args).checked;
-          let checked = {checked: false};
-          if(status) checked.checked = true;
-          const res = await ToDos.updateOne(args,checked);
-          return convertString(res.ops[0]);
+        checkToDo: async (root, {_id}, context, info) => {
+          const todo = await ToDos.findOne(ObjectId(_id));
+          let checked = { $set: {checked: true} };
+          await ToDos.updateOne(todo,checked);
         },
-      },
+        uncheckToDo: async (root, {_id}, context, info) => {
+          const todo = await ToDos.findOne(ObjectId(_id));
+          let checked = { $set: {checked: false} };
+          await ToDos.updateOne(todo,checked);
+        },        
+      },      
     };
 
     // define GraphQL schema

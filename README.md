@@ -3,8 +3,7 @@ Start
     2. install global: `npm install --global gatsby-cli nodemon`
     3. install gatsby-site: `npm run gatsby-install`
     - recursively install all node modules subdependencies (recursive-install???)
-    4. install: `npm install`
-
+    4. install: `npm install` or `npm run install-all`
 
 Global:
 install gatsby-cli globally: npm install --global gatsby-cli
@@ -21,6 +20,29 @@ Typescript
 - upgrade node version to 7.6+
 - 
 Full size of app? Disk space?
+
+
+DEVELOPMENT MODES:
+    Develop server and GraphQL API (with hot reloading) 
+    using the production build of gatsby-site (no hot reloading):
+        * note: any changes to gatsby-site require the command to be re-run
+        1. `npm run start-dev`
+        2. Navigate to the link that displays.
+        
+    Develop only the Gatsby-Site static pages (with hot reloading):
+        1. `npm run gatsby-dev`
+        2. Navigate to the link that displays.
+    
+    Develop only the server and GraphQL API (with hot reloading):
+        1.  `npm run server-dev`
+        2.  Navigate to the link that displays.
+
+(To Develop Both: must run on separate ports and pass the port # to each other somehow)
+But the app is not configured to handle this scenario.
+
+TESTING:
+    Only one test is written: ToDoList › renders correctly
+        1. `npm run gatsby-test`
 
 ------ Part 1: 
 Create a Todo List API in Node JS 
@@ -67,7 +89,15 @@ GRAPHQL-TO-MONGODB, OR HOW I LEARNED TO STOP WORRYING AND LOVE GENERATED QUERY A
 A CRUD app with Apollo, GraphQL, NodeJs, Express, MongoDB, Angular (v5): https://blog.cloudboost.io/a-crud-app-with-apollo-graphql-nodejs-express-mongodb-angular5-2874111cd6a5
 Setting up a simple GraphQL Server with Node, Express and Mongoose: https://medium.com/@gethylgeorge/setting-up-a-simple-graphql-server-with-node-express-and-mongoose-ff8a1071af53
 * Using GraphQL with MongoDB: https://www.compose.com/articles/using-graphql-with-mongodb/
+^ source code: https://github.com/igorlima/todo-mongo-graphql-server/blob/master/schema.js
 <Location> with CodeSandbox: https://github.com/gatsbyjs/gatsby/issues/1875
+window is not defined: https://www.gatsbyjs.org/docs/debugging-html-builds/
+Apollo Getting Started: https://www.apollographql.com/docs/react/essentials/get-started.html
+Gatsby GraphQL queries: https://www.gatsbyjs.org/docs/page-query/
+React checkbox: https://stackoverflow.com/questions/39120007/setting-a-checkbox-check-property-in-react
+Apollo mutate function: https://github.com/apollographql/apollo-client/blob/master/docs/source/basics/mutations.md
+GraphQL variables: https://graphql.org/learn/queries/#variables
+Apollo client mutate example: https://github.com/apollographql/apollo-client/issues/2762
 
 ------- mlab.com
 To connect using the mongo shell:

@@ -1,3 +1,7 @@
+# Project dependencies
 node_modules
+yarn-error.log
+
+# Developer tests
+.ignore
 output*
-*.log
