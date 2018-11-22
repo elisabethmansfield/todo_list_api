@@ -1,6 +1,5 @@
 import gql from 'graphql-tag';
 
-// _id must be passed in double quotes
 const GET_TODO = gql`
   query {
     todo (_id: ID){

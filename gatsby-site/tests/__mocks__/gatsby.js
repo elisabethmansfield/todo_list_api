@@ -1,5 +1,5 @@
 /* https://www.gatsbyjs.org/docs/unit-testing/
-Useful mocks to complete your testing environment
+Useful mock to complete your testing environment
 */
 
 const React = require("react");

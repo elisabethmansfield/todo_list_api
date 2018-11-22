@@ -26,13 +26,10 @@ export default class ContactForm extends React.Component {
     this.setState({
       [name]: value
     });
-    console.log('state: ',this.state.name,this.state.message);
   }
 
   handleSubmit(e) {
-    console.log('Form submitted: ',this.state.name,this.state.message);
     e.preventDefault();
-    
     try{
       const body = { 
         name: this.state.name,
@@ -52,7 +49,7 @@ export default class ContactForm extends React.Component {
         }))
       );
     } catch(err){
-      return 'Error: ' + err;
+      console.log('Error: ' + err);
     }
   }
   render() {

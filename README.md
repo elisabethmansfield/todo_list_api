@@ -1,110 +1,72 @@
-Start
-    1. update node to latest version using nvm or 7.6+: `nvm install 10.13.0` or `nvm install node --reinstall-packages-from=node`
-    2. install global: `npm install --global gatsby-cli nodemon`
-    3. install gatsby-site: `npm run gatsby-install`
-    - recursively install all node modules subdependencies (recursive-install???)
-    4. install: `npm install` or `npm run install-all`
+# Documentation
 
-Global:
-install gatsby-cli globally: npm install --global gatsby-cli
-install mongodb globally?
-npm install -g nodemon (or dev dependency?): npm install --global nodemon
+## Overview
+- Name: **To Do List Application**
+- Author: Elisabeth Mansfield
+- Version: 1.0.0
+- Description: A To-Do list that retrieves data from a NoSQL API.
+- Git: https://github.com/elisabethmansfield/todo_list_api.git
 
-- npm install --save dns fs module net tls
-- install gatsby dependencies and app dependencies separate commands
-- NPM install in gatsby-site and app
-GatsbyJS - install globally (gatsby-cli)
-NoSQL database: MongoDB (or Couchbase?) - install globally
-NodeJS + Express
-Typescript
-- upgrade node version to 7.6+
-- 
-Full size of app? Disk space?
+## Installation
+1. Clone the app using the command line:
+	```shell
+	git clone https://github.com/elisabethmansfield/todo_list_api.git
+	cd todo_list_api
+	```
 
+2.	Update Node to a version 7.6+:
+	```shell
+	nvm install 10.13.0
+	```
 
-DEVELOPMENT MODES:
-    Develop server and GraphQL API (with hot reloading) 
-    using the production build of gatsby-site (no hot reloading):
-        * note: any changes to gatsby-site require the command to be re-run
-        1. `npm run start-dev`
-        2. Navigate to the link that displays.
-        
-    Develop only the Gatsby-Site static pages (with hot reloading):
-        1. `npm run gatsby-dev`
-        2. Navigate to the link that displays.
-    
-    Develop only the server and GraphQL API (with hot reloading):
-        1.  `npm run server-dev`
-        2.  Navigate to the link that displays.
+3. Install dependencies:
+	```shell
+	npm install --global gatsby-cli nodemon
+	npm run install-all
+	```
 
-(To Develop Both: must run on separate ports and pass the port # to each other somehow)
-But the app is not configured to handle this scenario.
+## Application
+1. Run the application in **development** mode:
+ - Develop the server and GraphQL API (with hot reloading):
+    * Note: This uses the production build of gatsby-site (no hot reloading), 
+    and any changes to gatsby-site will require the command to be re-run.
+	```shell
+	npm run start-dev
+	```
 
-TESTING:
-    Only one test is written: ToDoList › renders correctly
-        1. `npm run gatsby-test`
+- Develop only the Gatsby static pages (with hot reloading):
+	```shell
+    npm run gatsby-dev
+	```
 
------- Part 1: 
-Create a Todo List API in Node JS 
+2. Run the application in **production** mode:
+	```shell
+    npm run start
+	```
 
-Operations the API must provide: 
-1. Get the list of all the task of the todo list 
-2. Check/uncheck a task 
-3. Delete a task 
+## Testing
+1. Test the application:
+	```shell
+    npm run test
+	```
 
-Technologies: 
-NodeJS
-Used an NoSQL database 
-Build a REST or GraphQL API (GraphQL is the most valued) 
-Used Typescript or Flow for type checked the API 
-Used ES6/7 features 
-Test at least one operation
+## Technologies
+- [Node.js](https://nodejs.org/): Server-side JavaScript runtime environment
+- [React](https://reactjs.org/): Front-end user interface JavaScript library 
+- [Express](https://expressjs.com/): Web app framework for Node.js
+- [GatsbyJS](https://www.gatsbyjs.org/): Static site generator for React
+- [GraphQL](https://graphql.org/): Query language for APIs
+- [MongoDB](https://www.mongodb.com/): Document-oriented NoSQL database
+- [Apollo](https://www.apollographql.com/): Implementation tool for GraphQL 
+- [Sass](https://sass-lang.com/): Preprocessor for CSS styles 
+- [Zapier](https://zapier.com/): Webhook for HTTP POST messages
+- [Jest](https://jestjs.io/): Testing for JavaScript and React
 
-
-------- Part 2: 
-Create a GatsbyJS website with 3 pages. 
-
-Webpages:
-- Page 1: Who you are 
-- Page 2: Your previous code project 
-- Page 3: Contact page with a form that send data with Zapier Webhooks. 
-
-Technologies:
-GatsbyJS (React, Webpack, GraphQL)
-Don't waste too much time on design. 
-Use styled components for css. 
-All texts have to be query from Prismic.
-Git
-
-
-------- Tutorials
-* Write GraphQL APIs on Node with MongoDB: https://blog.bitsrc.io/write-graphql-apis-on-node-with-mongodb-f3d0084cbbb8
-express-graphql Documentation: https://github.com/graphql/express-graphql
-graphql-tools Documentation: https://github.com/apollographql/graphql-tools
-graphql Documentation: https://www.npmjs.com/package/graphql
-GraphQL and MongoDB - A Quick Example: https://medium.com/the-ideal-system/graphql-and-mongodb-a-quick-example-34643e637e49
-^ source code: https://github.com/nmaro/graphql-mongodb-example/blob/master/src/start.js
-How to set-up a powerful API with Nodejs, GraphQL, MongoDB, Hapi, and Swagger: https://medium.freecodecamp.org/how-to-setup-a-powerful-api-with-nodejs-graphql-mongodb-hapi-and-swagger-e251ac189649
-GRAPHQL-TO-MONGODB, OR HOW I LEARNED TO STOP WORRYING AND LOVE GENERATED QUERY APIS: https://blog.solutotlv.com/graphql-to-mongodb-or-how-i-learned-to-stop-worrying-and-love-generated-query-apis/?utm_source=stackoverflow&utm_medium=47660758
-A CRUD app with Apollo, GraphQL, NodeJs, Express, MongoDB, Angular (v5): https://blog.cloudboost.io/a-crud-app-with-apollo-graphql-nodejs-express-mongodb-angular5-2874111cd6a5
-Setting up a simple GraphQL Server with Node, Express and Mongoose: https://medium.com/@gethylgeorge/setting-up-a-simple-graphql-server-with-node-express-and-mongoose-ff8a1071af53
-* Using GraphQL with MongoDB: https://www.compose.com/articles/using-graphql-with-mongodb/
-^ source code: https://github.com/igorlima/todo-mongo-graphql-server/blob/master/schema.js
-<Location> with CodeSandbox: https://github.com/gatsbyjs/gatsby/issues/1875
-window is not defined: https://www.gatsbyjs.org/docs/debugging-html-builds/
-Apollo Getting Started: https://www.apollographql.com/docs/react/essentials/get-started.html
-Gatsby GraphQL queries: https://www.gatsbyjs.org/docs/page-query/
-React checkbox: https://stackoverflow.com/questions/39120007/setting-a-checkbox-check-property-in-react
-Apollo mutate function: https://github.com/apollographql/apollo-client/blob/master/docs/source/basics/mutations.md
-GraphQL variables: https://graphql.org/learn/queries/#variables
-Apollo client mutate example: https://github.com/apollographql/apollo-client/issues/2762
-
-------- mlab.com
-To connect using the mongo shell:
-mongo ds161653.mlab.com:61653/todo_list_api_db -u <dbuser> -p <dbpassword>
-
-To connect using a driver via the standard MongoDB URI (what's this?):
-mongodb://<dbuser>:<dbpassword>@ds161653.mlab.com:61653/todo_list_api_db
-
-owner
-dev161653
+	### Other:
+	- HTML
+	- CSS
+	- JavaScript ES6/7
+	- Webpack	
+	- RESTful 
+	- API
+	- Git

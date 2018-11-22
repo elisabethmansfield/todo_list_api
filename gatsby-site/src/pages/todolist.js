@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import ToDoList from '../containers/ToDoList';
-// import { url } from '../../../server/app';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloLink } from 'apollo-link';
 import { ApolloClient } from 'apollo-client';
@@ -19,9 +17,7 @@ let ToDoListPage = () => (
 
 /* Local API configuration */
 if (typeof window !== `undefined`) {
-  
   const BASE_URL = window.location.origin.toString() + "/api/";
-
   const errorLink = onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors)
       graphQLErrors.map(({ message, locations, path }) =>
@@ -51,16 +47,3 @@ if (typeof window !== `undefined`) {
 }
 
 export default ToDoListPage;
-
-  // console.log(
-  //   'my BASE_URL: ',BASE_URL,
-  //   //   '\nhash: ',location.hash,
-  //   //   '\nhost: ',location.host,	
-  //   //   '\nhostname: ',location.hostname,	
-  //   //   '\nhref: ',location.href,	
-  //   //   '\norigin: ',location.origin,	
-  //   //   '\npathname: ',location.pathname,	
-  //   //   '\nport: ',location.port,	
-  //   //   '\nprotocol: ',location.protocol,	
-  //   //   '\nsearch: ',location.search,	
-  // );

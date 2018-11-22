@@ -1,10 +1,5 @@
 import gql from 'graphql-tag';
 
-// addToDo(name: String!, checked: Boolean): ToDo
-// deleteToDo(_id: ID!): ToDo
-// checkToDo(_id: ID!): ToDo
-// uncheckToDo(_id: ID!): ToDo
-
 const ADD_TODO = gql`
   mutation a($name: String!, $checked: Boolean){
     addToDo (name: $name, checked: $checked){
@@ -46,12 +41,3 @@ export {
   UNCHECK_TODO,
 };
 
-
-// // const DELETE_TODOS = gql`
-//   // mutation {
-//   //   deleteToDos {
-
-//   //   }
-//   // }
-// // `;
-// //   DELETE_TODOS,
